@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int jump(vector<int>& nums) {
+        int current=0;
+        int jump=0;
+        int frather=0;
+        for(int i=0;i<nums.size()-1;i++){
+            frather=max(frather,nums[i]+i);
+        
+        if(i==current){
+            current=frather;
+            jump++;
+
+            if(current >=nums.size()-1)break;
+        }
+        }
+         return jump;
+}
+};
