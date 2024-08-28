@@ -1,0 +1,10 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        set<int>m(nums.begin(),nums.end());
+        if(m.size()==nums.size()){
+            return false;
+        }
+        return true;
+        }
+};
